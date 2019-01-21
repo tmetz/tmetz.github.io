@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Portfolio Project"
-date:       2019-01-21 15:58:25 +0000
+date:       2019-01-21 10:58:25 -0500
 permalink:  sinatra_portfolio_project
 ---
 
@@ -105,4 +105,4 @@ end
 
 I lucked out and found this blog post by a fellow Flatiron student about how she deployed to Heroku.  By following her instructions (with a little tweaking), I was able to get the app deployed and functional.  I learned that you can set up Heroku to automatically update ("deploy") every time a change is pushed to GitHub.
 
-https://medium.com/@christine_tran/deploying-sinatra-app-to-heroku-8c64f025db77
+[https://medium.com/@christine_tran/deploying-sinatra-app-to-heroku-8c64f025db77](https://medium.com/@christine_tran/deploying-sinatra-app-to-heroku-8c64f025db77)
