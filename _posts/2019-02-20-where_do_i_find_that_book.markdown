@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Where do I find that book?"
-date:       2019-02-20 23:15:12 +0000
+date:       2019-02-20 18:15:12 -0500
 permalink:  where_do_i_find_that_book
 ---
 
+## Introduction
 
 ![Screenshot of sample map](http://tammymetz.com/stacksmap-sm.jpg)
 
-## Introduction
 
 Several years ago, I worked in an academic library as a systems librarian (basically, I made sure anything computer-related worked and was regularly updated).  While at that job, I wrote a program to dynamically create a map of where to find any book in the library stacks.  I figured out how to integrate it into our Integrated Library System, so that a user could look up any book in the catalog and create a map of where to find it on the fly.  I had previously written this up as a PowerPoint presentation in order to present at a conference, but I realized that most people probably are not going to want to open up a PowerPoint.  So now that I have this blog, I'm going to go ahead and try to describe what I did and how I did it.  [You can still see this in action by doing a catalog search for a book or other material.](http://library.dinecollege.edu/vwebv/searchBasic?sk=dc)  Look near the bottom of the catalog record for "Show me a map."
 
@@ -17,7 +17,7 @@ Several years ago, I worked in an academic library as a systems librarian (basic
 
 I was working at a [tribal college library located on the Navajo reservation in northern Arizona and New Mexico](http://www.dinecollege.edu).  There are not very many libraries on the Navajo reservation, so the library at Diné  College is a bit of a jewel.  It has a lot of rare Native American materials, as well as many other subjects that any other University library might be expected to have.  
 
-In late 2012, I attended a talk at the LITA (Library Information Technology Association) conference.  The talk was by Geoffrey Timms and Jeremy Brown from Mercer University.  They had developed a stacks map, and I decided I wanted to try this too!  I soon analyzed the resources I had at hand (which were woefully less than what they had used, including the systems librarian!).  I did not have a separate test server, only production servers.  I did not know enough about using a database back end to want to try that.  Possible languages that were installed on the server were Java and Perl.  I did not want to install anything else or make any changes to the server, because it was set up by our ILS company in a very specific configuration -- so if I broke something, I would bring down our whole catalog.  In terms of personnel, I was the only person in our system of 3 libraries across 6 campuses who really worked with technology at all.e
+In late 2012, I attended a talk at the LITA (Library Information Technology Association) conference.  The talk was by Geoffrey Timms and Jeremy Brown from Mercer University.  They had developed a stacks map, and I decided I wanted to try this too!  I soon analyzed the resources I had at hand (which were woefully less than what they had used, including the systems librarian!).  I did not have a separate test server, only production servers.  I did not know enough about using a database back end to want to try that.  Possible languages that were installed on the server were Java and Perl.  I did not want to install anything else or make any changes to the server, because it was set up by our ILS company in a very specific configuration -- so if I broke something, I would bring down our whole catalog.  In terms of personnel, I was the only person in our system of 3 libraries across 6 campuses who really worked with technology at all.
 
 I ultimately decided not to use a server-side language (later changing my mind when I added a Perl script to the mix), and try it in vanilla JavaScript.  I used the new HTML5 canvas tag because I have no artistic ability whatsoever.
 
@@ -47,7 +47,7 @@ http://library.dinecollege.edu/mapts.htm?collection=Main&callnumber=E99.N3_B498_
 
 - Create the canvas
 - First layer: the image file of the map + captions
-- Second layer: a blue rectangle that "peeks out" from underneath the top rectanlge to highlight the appropriate side of the shelf
+- [Second layer: a blue rectangle that "peeks out" from underneath the top rectanlge to highlight the appropriate side of the shelf] -- this layer came later on in the development process
 - Top layer: a red rectangle overlaid on the shelf that holds the item
 - Coordinates, length and width for the rectangle are determined by parsing the call number from the params.
 
@@ -106,7 +106,7 @@ ctx.fillRect(xcoord,ycoord,width,length);
 
 At this point, the mapping was extremely general -- only looking at the very first part of the call number.  The next step was to develop a more granular solution that could also identify the correct side of the shelf to look on, then draw a second, overlapping rectangle, to highlight that side.
 
-Since there were three different libraries, each had its own layout.  This resulted in having both "horizontal" and "vertical" shelves on the schematics, which necessitated more calculations for drawing and shading:
+Since there were three different libraries, each had its own layout.  This resulted in having both "horizontal" and "vertical" shelves on the schematics, which necessitated more calculations for drawing and shading.  Here is an example of using 4 sides of the shelf instead of 2 (sides 3 and 4 are "horizontal"):
 
 ```
 if (shelf_side > 0) {
@@ -126,7 +126,7 @@ if (shelf_side > 0) {
         break;
       }
     }
-		```
+```
 		
 Somewhere in the refactoring process, I also decided to add in a QR code so students could scan the map to their phone.  Google made this easy with their Charts API (the QR code functionality is unfortunately now deprecated, I believe):
 		
@@ -135,9 +135,10 @@ Somewhere in the refactoring process, I also decided to add in a QR code so stud
 + qsParm['collection'] + '%26callnumber=' + qsParm['callnumber'] + %26qr=no';
 ```
 
-## Integrating with the library catalog (Ex Libris Voyager)
-#### Old Catalog
 
+## Integrating with the library catalog (Ex Libris Voyager)
+
+#### Old Catalog
 When I began working at Diné College, we were running Voyager 7.2.1 with the classic OPAC.  I was able to insert a link to the map router by using the 852 MARC field.  I followed the directions Ex Libris gave for integrating Syndetics book covers into the catalog, and added the following to the displayh.cfg file:
 
 ```
@@ -151,7 +152,6 @@ Click here for a map!</a></strong>
 This let Voyager send the call number and location directly from the MARC record to the map router.  The map router then processed that information from the params, as described above.
 
 #### New Catalog
-
 We moved from the "Classic" OPAC to the Tomcat OPAC in the summer of 2013.  It was a bit more difficult to integrate the map, but I was able to take advantage of the change to pass the title in the query string as well, so that was cool.
 
 I followed the instructions in chapter 10 of the WebVoyage Architecture Manuual and created a file called /m1/voyager/xxxxdb/tomcat/vwebv/context/vwebv/ui/[skin]/xsl/contentLayout/local_locMapLink.xsl
@@ -240,6 +240,7 @@ Then I modified the BMD1000 template of display.xsl as follows:
     </xsl:for-each>
 </xsl:template>
 ```
+
 
 ## Transitioning to a Perl Script
 I wanted to move away from hard-coding the coordinates of each shelf.  I needed to normalize (sort) the call numbers so I wouldn't have to modify code every time there was a shelf shift.  I looked around for a call number normalizer -- there were a few, but many had issues.  I finally found Michael Doran's great call number sorter library in Perl that seemed stable and usable (see [http://rocky.uta.edu/doran/sortlc/](http://rocky.uta.edu/doran/sortlc/)).
