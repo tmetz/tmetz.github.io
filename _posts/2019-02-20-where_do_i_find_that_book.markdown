@@ -138,7 +138,7 @@ Somewhere in the refactoring process, I also decided to add in a QR code so stud
 
 ## Integrating with the library catalog (Ex Libris Voyager)
 
-#### Old Catalog
+### Old Catalog
 When I began working at Diné College, we were running Voyager 7.2.1 with the classic OPAC.  I was able to insert a link to the map router by using the 852 MARC field.  I followed the directions Ex Libris gave for integrating Syndetics book covers into the catalog, and added the following to the displayh.cfg file:
 
 ```
@@ -151,7 +151,7 @@ Click here for a map!</a></strong>
 
 This let Voyager send the call number and location directly from the MARC record to the map router.  The map router then processed that information from the params, as described above.
 
-#### New Catalog
+### New Catalog
 We moved from the "Classic" OPAC to the Tomcat OPAC in the summer of 2013.  It was a bit more difficult to integrate the map, but I was able to take advantage of the change to pass the title in the query string as well, so that was cool.
 
 I followed the instructions in chapter 10 of the WebVoyage Architecture Manuual and created a file called /m1/voyager/xxxxdb/tomcat/vwebv/context/vwebv/ui/[skin]/xsl/contentLayout/local_locMapLink.xsl
