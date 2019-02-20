@@ -7,7 +7,7 @@ permalink:  where_do_i_find_that_book
 
 ## Introduction
 
-![Screenshot of sample map](http://tammymetz.com/stacksmap-sm.jpg)
+![Screenshot of sample map](http://tammymetz.com/stacksmap.jpg)
 
 
 Several years ago, I worked in an academic library as a systems librarian (basically, I made sure anything computer-related worked and was regularly updated).  While at that job, I wrote a program to dynamically create a map of where to find any book in the library stacks.  I figured out how to integrate it into our Integrated Library System, so that a user could look up any book in the catalog and create a map of where to find it on the fly.  I had previously written this up as a PowerPoint presentation in order to present at a conference, but I realized that most people probably are not going to want to open up a PowerPoint.  So now that I have this blog, I'm going to go ahead and try to describe what I did and how I did it.  [You can still see this in action by doing a catalog search for a book or other material.](http://library.dinecollege.edu/vwebv/searchBasic?sk=dc)  Look near the bottom of the catalog record for "Show me a map."
