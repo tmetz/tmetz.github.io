@@ -96,7 +96,7 @@ get "/persons/recent" do
          @user = current_user
          @persons = @user.persons.where("updated_at > ?", 7.days.ago).uniq
          @from_recent = 1
-				erb :'/persons/index'
+				 erb :'/persons/index'
      else
          redirect '/login'
      end
