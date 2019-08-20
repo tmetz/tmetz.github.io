@@ -9,7 +9,7 @@ permalink:  done_is_good_--_a_rails_application
 
 My Rails final project has been a much longer process than I would have hoped.  I think mostly because I felt so shaky in my overall understanding of Rails -- I needed time to process.
 
-You can view a walkthrough video at [https://youtu.be/iueYc6LS5eQ](https://youtu.be/iueYc6LS5eQ).  You can view the code and fork the project at [https://github.com/tmetz/done-is-good](https://github.com/tmetz/done-is-good).
+You can view a walkthrough video at [https://youtu.be/iueYc6LS5eQ](https://youtu.be/iueYc6LS5eQ).  You can view the running app at [https://done-is-good.herokuapp.com](https://done-is-good.herokuapp.com) (use u/n: test, p/w: test or feel free to create your own account).  You can view the code and fork the project at [https://github.com/tmetz/done-is-good](https://github.com/tmetz/done-is-good).
 
 The application is something of a beefed up to-do list.  It allows users to create tasks to be done, and also allows them to group tasks into larger goals.  Additionally, users can create incentives tied to goals to help encourage them to keep progressing to the finish line.
 
