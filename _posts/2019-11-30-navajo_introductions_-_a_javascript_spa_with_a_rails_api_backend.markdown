@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Navajo Introductions - a JavaScript SPA with a Rails API backend"
-date:       2019-11-30 21:55:06 +0000
+date:       2019-11-30 16:55:07 -0500
 permalink:  navajo_introductions_-_a_javascript_spa_with_a_rails_api_backend
 ---
 
