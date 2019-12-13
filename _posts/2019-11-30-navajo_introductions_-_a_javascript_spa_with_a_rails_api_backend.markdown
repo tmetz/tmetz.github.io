@@ -9,7 +9,7 @@ permalink:  navajo_introductions_-_a_javascript_spa_with_a_rails_api_backend
 
 (Disclaimer: I am a non-native student of Navajo culture, not an expert. I welcome corrections to this information - email me at [tammy@tammymetz.com](mailto:tammy@tammymetz.com))
 
-For my JavaScript section final project, I decided to create a SPA (Single Page Application) to generate a personalized greeting for someone, in Navajo language, based on their 4 clans.  [You can watch a walkthrough video here.](https://www.youtube.com/watch?v=-bNTm2Zrurc&feature=youtu.be)  [Go here for the GitHub repository for the front end](https://github.com/tmetz/navajo-introductions-frontend).  [Go here for the GitHub repository for the back end.](https://github.com/tmetz/navajo-introductions-backend)  
+For my JavaScript section final project, I decided to create a SPA (Single Page Application) to generate a personalized greeting for someone, in Navajo language, based on their 4 clans.  [You can try it out yourself here.](https://navajo-introductions.herokuapp.com/)  Since it's hosted on two free Heroku dynos (one for the front end, one for the back end), you may need to wait about 30 seconds for the back end to wake up.  While you're waiting, you can read the background information.  [You can watch a walkthrough video here.](https://www.youtube.com/watch?v=-bNTm2Zrurc&feature=youtu.be)  [Go here for the GitHub repository for the front end](https://github.com/tmetz/navajo-introductions-frontend).  [Go here for the GitHub repository for the back end.](https://github.com/tmetz/navajo-introductions-backend)  
 
 ### Background
 
