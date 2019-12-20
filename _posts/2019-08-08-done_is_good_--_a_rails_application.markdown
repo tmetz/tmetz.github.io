@@ -5,6 +5,8 @@ date:       2019-08-08 02:11:17 -0400
 permalink:  done_is_good_--_a_rails_application
 ---
 
+![](http://tammymetz.com/images/done.jpg)
+
 ## Introduction
 
 My Rails final project has been a much longer process than I would have hoped.  I think mostly because I felt so shaky in my overall understanding of Rails -- I needed time to process.
