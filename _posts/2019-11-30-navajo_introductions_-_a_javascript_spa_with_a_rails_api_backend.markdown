@@ -5,6 +5,8 @@ date:       2019-11-30 16:55:07 -0500
 permalink:  navajo_introductions_-_a_javascript_spa_with_a_rails_api_backend
 ---
 
+![](http://tammymetz.com/images/navajo.jpg)
+
 ### Introduction
 
 (Disclaimer: I am a non-native student of Navajo culture, not an expert. I welcome corrections to this information - email me at [tammy@tammymetz.com](mailto:tammy@tammymetz.com))
