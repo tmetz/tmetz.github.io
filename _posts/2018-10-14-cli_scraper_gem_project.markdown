@@ -5,7 +5,7 @@ date:       2018-10-14 10:58:31 -0400
 permalink:  cli_scraper_gem_project
 ---
 
-![](http://tammymetz.com/images/tribal.jpg)
+![](http://tmetz.github.io/blogpics/images/tribal.jpg)
 
 I am (finally!!!) about to submit my CLI scraper ([https://github.com/tmetz/tribalcollege-cli](https://github.com/tmetz/tribalcollege-cli)).  The project I chose was to scrape a list of tribal colleges from the American Indian Higher Education Commission's website [(http://www.aihec.org/who-we-serve/TCUroster-profiles.htm]((http://www.aihec.org/who-we-serve/TCUroster-profiles.htm)).  You can view my walkthrough video at [https://www.youtube.com/watch?v=ilpK8IWM6GE](https://www.youtube.com/watch?v=ilpK8IWM6GE).  This is very near and dear to my heart, as I worked at a tribal college, and saw the impact that it had on the students in the area.  One thing that is hard for people to understand is how isolated some reservations can be.  It was literally a 3 hour drive to get to the closest state university, and having a tribal college opened up so many possibilities for people on the rez.
 
