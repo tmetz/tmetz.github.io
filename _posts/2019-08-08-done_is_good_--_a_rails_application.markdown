@@ -5,7 +5,7 @@ date:       2019-08-08 02:11:17 -0400
 permalink:  done_is_good_--_a_rails_application
 ---
 
-![](http://tammymetz.com/images/done.jpg)
+![](http://tmetz.github.io/blogpics/done.jpg)
 
 ## Introduction
 
