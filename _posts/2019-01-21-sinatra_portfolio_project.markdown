@@ -5,7 +5,7 @@ date:       2019-01-21 10:58:25 -0500
 permalink:  sinatra_portfolio_project
 ---
 
-![](http://tammymetz.com/images/networking.jpg)
+![](http://tmetz.github.io/blogpics/networking.jpg)
 
 **The Project:**
 
