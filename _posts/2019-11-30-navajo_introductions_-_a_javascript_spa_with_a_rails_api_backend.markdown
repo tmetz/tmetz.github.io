@@ -5,7 +5,7 @@ date:       2019-11-30 16:55:07 -0500
 permalink:  navajo_introductions_-_a_javascript_spa_with_a_rails_api_backend
 ---
 
-![](http://tammymetz.com/images/navajo.jpg)
+![](http://tmetz.github.io/blogpics/navajo.jpg)
 
 ### Introduction
 
